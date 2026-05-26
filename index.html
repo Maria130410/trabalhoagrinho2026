@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agro Forte, Futuro Sustentável</title>
     <style>
-        /* Reset e Variáveis de Cores */
+        /* Estilos Gerais */
         * {
             margin: 0;
             padding: 0;
@@ -13,92 +13,292 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        :root {
-            --primary: #2c5e3b;
-            --primary-light: #a3b899;
-            --accent: #8bf1a4;
-            --dark: #1e251f;
-            --light: #f4f7f5;
-            --white: #ffffff;
-        }
-
         body {
-            background-color: var(--light);
-            color: var(--dark);
+            background-color: #f4f7f5;
+            color: #333;
             line-height: 1.6;
         }
 
-        /* Header e Navegação */
         header {
-            background-color: var(--white);
-            padding: 1.5rem 10%;
-            position: fixed;
-            width: 100%;
+            background-color: #1b4332;
+            color: white;
+            padding: 20px 0;
+            position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo {
-            font-weight: 800;
-            font-size: 1.4rem;
-            color: var(--primary);
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #52b788;
         }
 
-        .logo span {
-            color: var(--dark);
+        nav ul {
+            display: flex;
+            list-style: none;
         }
 
-        nav a {
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
             text-decoration: none;
-            color: var(--dark);
-            margin-left: 2rem;
             font-weight: 500;
             transition: color 0.3s;
         }
 
-        nav a:hover {
-            color: var(--primary);
+        nav ul li a:hover {
+            color: #52b788;
         }
 
-        /* Hero Section (Banner Principal) */
+        /* Banner Principal */
         .hero {
-            margin-top: 80px;
-            height: 70vh;
-            background: linear-gradient(rgba(44, 94, 59, 0.7), rgba(30, 37, 31, 0.85)), 
-                        url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=2070') no-repeat center center/cover;
-            /* NOTA: Substitua a URL acima pela sua imagem principal se desejar */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            background-color: #2d6a4f;
+            color: white;
+            padding: 100px 0;
             text-align: center;
-            color: var(--white);
-            padding: 0 2rem;
+            position: relative;
+            overflow: hidden;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-weight: 800;
+            font-size: 3rem;
+            margin-bottom: 20px;
         }
 
         .hero p {
             font-size: 1.2rem;
-            max-width: 600px;
-            margin-bottom: 2rem;
-            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto 30px;
         }
 
-        .btn {
-            display: inline-block;
-            background-color: var(--accent);
-            color: var(--dark);
-            padding: 0.8rem 2rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.
+        /* Placeholder de Imagem */
+        .image-placeholder {
+            background-color: #d8f3dc;
+            border: 2px dashed #52b788;
+            color: #1b4332;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .hero-image-space {
+            height: 300px;
+            max-width: 800px;
+            margin: 20px auto 0;
+        }
+
+        /* Seção de Conteúdo (Pesquisa) */
+        .content-section {
+            padding: 60px 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        h2 {
+            color: #1b4332;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #52b788;
+            margin-top: 10px;
+        }
+
+        .text-block p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background-color: #e9f5ed;
+            border-left: 5px solid #2d6a4f;
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .side-image-space {
+            height: 400px;
+            width: 100%;
+        }
+
+        /* Galeria / Pilares */
+        .pillars {
+            background-color: #e9f5ed;
+            padding: 60px 0;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .pillar-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .pillar-card h3 {
+            color: #2d6a4f;
+            margin-bottom: 15px;
+        }
+
+        .card-image-space {
+            height: 150px;
+            margin-bottom: 15px;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #1b4332;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav">
+            <div class="logo">AgroForte 🌱</div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#pesquisa">A Pesquisa</a></li>
+                    <li><a href="#pilares">Pilares</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h1>Agro Forte, Futuro Sustentável</h1>
+            <p>Como a tecnologia e a preservação ambiental estão transformando o campo e garantindo a segurança alimentar do planeta.</p>
+            
+            <div class="image-placeholder hero-image-space">
+                [ INSIRA AQUI A SUA IMAGEM PRINCIPAL / BANNER ]<br>
+                (Recomendado: 800x300px ou superior)
+            </div>
+        </div>
+    </section>
+
+    <section id="pesquisa" class="content-section">
+        <div class="container grid">
+            
+            <div class="text-block">
+                <h2>O Desafio Global do Século XXI</h2>
+                <p>De acordo com dados consolidados da <strong>Organização das Nações Unidas para a Alimentação e a Agricultura (FAO)</strong> e do <strong>Banco Mundial</strong>, a agricultura global enfrenta o maior desafio de sua história moderna: aumentar a produção de alimentos em cerca de 60% para abastecer uma população estimada em 10 bilhões de pessoas, ao mesmo tempo em que precisa reduzir drasticamente sua pegada de carbono e o uso de recursos hídricos.</p>
+                
+                <div class="highlight-box">
+                    "O futuro da segurança alimentar depende da nossa capacidade de produzir mais, utilizando menos recursos e regenerando o ecossistema local."
+                </div>
+
+                <p>Estudos recentes apontam que as práticas de <strong>Agricultura Regenerativa</strong>, a digitalização do campo (Agro 4.0) e o manejo sustentável do solo têm o potencial de sequestrar até 5 gigatoneladas de CO₂ por ano. O Brasil, como uma das maiores potências agroambientais do mundo, lidera pesquisas em sistemas de Integração Lavoura-Pecuária-Floresta (ILPF), provando que a produtividade e a conservação da biodiversidade andam de mãos dadas.</p>
+            </div>
+
+            <div>
+                <div class="image-placeholder side-image-space">
+                    [ INSIRA AQUI UMA IMAGEM ILUSTRATIVA DA PESQUISA ]<br>
+                    (Recomendado: Imagem vertical ou quadrada, ex: 500x400px)
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="pilares" class="pillars">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 10px;">Caminhos para a Sustentabilidade</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 40px;">A transformação do campo se apoia em três grandes frentes tecnológicas e ecológicas:</p>
+            
+            <div class="pillars-grid">
+                
+                <div class="pillar-card">
+                    <div class="image-placeholder card-image-space">
+                        [ Imagem: Tecnologia ]
+                    </div>
+                    <h3>Tecnologia no Campo</h3>
+                    <p>Uso de drones, sensores IoT e inteligência artificial para otimizar o uso de água, fertilizantes e defensivos agrícolas.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="image-placeholder card-image-space">
+                        [ Imagem: Solo ]
+                    </div>
+                    <h3>Solo Vivo</h3>
+                    <p>Práticas de plantio direto e rotação de culturas que preservam os microrganismos do solo e evitam a erosão.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="image-placeholder card-image-space">
+                        [ Imagem: Energia ]
+                    </div>
+                    <h3>Energia Limpa</h3>
+                    <p>Crescimento do uso de energia solar nas propriedades e produção de biocombustíveis a partir de resíduos agrícolas.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 - Agro Forte, Futuro Sustentável. Todos os direitos reservados.</p>
+            <p>Dados baseados em relatórios da FAO e Embrapa.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
