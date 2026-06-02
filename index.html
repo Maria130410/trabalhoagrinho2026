@@ -19,36 +19,14 @@
             line-height: 1.6;
         }
 
-        /* Modificação no Cabeçalho para suportar imagem com transparência */
         header {
-            background-color: #1b4332; /* Cor de fundo caso a imagem falhe */
+            background-color: #1b4332;
+            color: white;
+            padding: 20px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            overflow: hidden; /* Garante que a imagem não saia do cabeçalho */
-        }
-
-        /* Pseudoelemento para controlar a imagem de fundo e sua opacidade */
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            /* COLOQUE O LINK OU CAMINHO DA SUA IMAGEM ABAIXO */
-            background-image: url('CAMINHO_DA_SUA_IMAGEM.jpg'); 
-            background-size: cover;
-            background-position: center;
-            opacity: 0.4; /* Ajuste a transparência aqui (0.0 totalmente invisível até 1.0 totalmente opaco) */
-            z-index: -1; /* Garante que a imagem fique atrás do texto */
-        }
-
-        /* Container do cabeçalho com padding */
-        .header-content {
-            padding: 20px 0;
-            position: relative; /* Mantém o conteúdo acima do ::before */
         }
 
         .container {
@@ -67,7 +45,6 @@
             font-size: 1.5rem;
             font-weight: bold;
             color: #52b788;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra leve para destacar no fundo */
         }
 
         nav ul {
@@ -84,7 +61,6 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra leve para destacar no fundo */
         }
 
         nav ul li a:hover {
@@ -264,7 +240,7 @@
 <body>
 
     <header>
-        <div class="container header-content nav">
+        <div class="container nav">
             <div class="logo">AgroForte 🌱</div>
             <nav>
                 <ul>
@@ -282,4 +258,75 @@
             <p>Como a tecnologia e a preservação ambiental estão transformando o campo e garantindo a segurança alimentar do planeta.</p>
             
             <div class="image-container hero-image-space">
-                <img src="https://img.magnific.com/fotos-gratis/tractor-a-trabalhar-num-campo-verde_23-2151983626.jpg?
+                <img src="https://img.magnific.com/fotos-gratis/tractor-a-trabalhar-num-campo-verde_23-2151983626.jpg?semt=ais_hybrid&w=740&q=80" alt="Plantação sustentável de alta tecnologia">
+            </div>
+        </div>
+    </section>
+
+    <section id="pesquisa" class="content-section">
+        <div class="container grid">
+            
+            <div class="text-block">
+                <h2>O Desafio Global do Século XXI</h2>
+                <p>De acordo com dados consolidados da <strong>Organização das Nações Unidas para a Alimentação e a Agricultura (FAO)</strong> e do <strong>Banco Mundial</strong>, a agricultura global enfrenta o maior desafio de sua história moderna: aumentar a produção de alimentos em cerca de 60% para abastecer uma população estimada em 10 bilhões de pessoas, ao mesmo tempo em que precisa reduzir drasticamente sua pegada de carbono e o uso de recursos hídricos.</p>
+                
+                <div class="highlight-box">
+                    "O futuro da segurança alimentar depende da nossa capacidade de produzir mais, utilizando menos recursos e regenerando o ecossistema local."
+                </div>
+
+                <p>Estudos recentes apontam que as práticas de <strong>Agricultura Regenerativa</strong>, a digitalização do campo (Agro 4.0) e o manejo sustentável do solo têm o potencial de sequestrar até 5 gigatoneladas de CO₂ por ano. O Brasil, como uma das maiores potências agroambientais do mundo, lidera pesquisas em sistemas de Integração Lavoura-Pecuária-Floresta (ILPF), provando que a produtividade e a conservação da biodiversidade andam de mãos dadas.</p>
+            </div>
+
+            <div>
+                <div class="image-container side-image-space">
+                    <img src="https://nutricaodesafras.com.br/wp-content/uploads/2023/05/saude-do-solo.jpg" alt="Pesquisa e análise de solo no campo">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="pilares" class="pillars">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 10px;">Caminhos para a Sustentabilidade</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 40px;">A transformação do campo se apoia em três grandes frentes tecnológicas e ecológicas:</p>
+            
+            <div class="pillars-grid">
+                
+                <div class="pillar-card">
+                    <div class="image-container card-image-space">
+                        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=400&h=250&q=80" alt="Tecnologia e drones no campo">
+                    </div>
+                    <h3>Tecnologia no Campo</h3>
+                    <p>Uso de drones, sensores IoT e inteligência artificial para otimizar o uso de água, fertilizantes e defensivos agrícolas.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="image-container card-image-space">
+                        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=400&h=250&q=80" alt="Solo saudável e brotos crescendo">
+                    </div>
+                    <h3>Solo Vivo</h3>
+                    <p>Práticas de plantio direto e rotação de culturas que preservam os microrganismos do solo e evitam a erosão.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="image-container card-image-space">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=400&h=250&q=80" alt="Painéis solares em área rural">
+                    </div>
+                    <h3>Energia Limpa</h3>
+                    <p>Crescimento do uso de energia solar nas propriedades e produção de biocombustíveis a partir de resíduos agrícolas.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 - Agro Forte, Futuro Sustentável. Todos os direitos reservados.</p>
+            <p>Dados baseados em relatórios da FAO e Embrapa.</p>
+        </div>
+    </footer>
+
+</body>
+</html>.
