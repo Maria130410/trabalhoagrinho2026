@@ -1,0 +1,247 @@
+/* Configurações Gerais e Cores */
+:root {
+    --cor-principal: #2e7d32; /* Verde Agro */
+    --cor-secundaria: #81c784;
+    --cor-escura: #1b5e20;
+    --cor-fundo: #f4f7f5;
+    --texto: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--texto);
+    scroll-behavior: smooth;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--cor-escura);
+}
+
+.logo span {
+    color: var(--cor-principal);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--texto);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--cor-principal);
+}
+
+.btn-nav {
+    background-color: var(--cor-principal);
+    color: #fff !important;
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: background 0.3s !important;
+}
+
+.btn-nav:hover {
+    background-color: var(--cor-escura);
+}
+
+/* Seção Hero (Banner Principal) */
+.hero {
+    background-linear-gradient: rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=1920');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease;
+}
+
+.hero-content p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.btn-principal {
+    background-color: var(--cor-principal);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.btn-principal:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+/* Seção de Pilares (Cards) */
+.pilares-section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.pilares-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    position: relative;
+    color: var(--cor-escura);
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card h3 {
+    margin: 20px 0 10px 0;
+    color: #222;
+}
+
+.card p {
+    padding: 0 20px;
+    font-size: 14px;
+    color: #666;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.btn-card {
+    background: none;
+    border: 2px solid var(--cor-principal);
+    color: var(--cor-principal);
+    padding: 10px 0;
+    margin: 0 20px 20px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-card:hover {
+    background-color: var(--cor-principal);
+    color: white;
+}
+
+/* Modal Interativo */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.fechar {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.fechar:hover {
+    color: black;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--cor-escura);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Animações Simples */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
